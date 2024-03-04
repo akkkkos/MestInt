@@ -9,6 +9,7 @@ import puzzles.MissionaryState;
 import puzzles.SlidingTileState;
 import puzzles.WaterJugState;
 import puzzles.FarmerWolfGoatState;
+import puzzles.Kirako;
 
 import search.AbstractSolver;
 import search.BreadthFirstSolver;
@@ -48,6 +49,7 @@ public class Tester {
 		trySolver(initialState, new BestFirstSolver());
 	}
 	public static void main(String[] args) {
+		/*
 		System.out.println("---------------------------------------------------------------");
 		System.out.println("Farmer Wolf Goat Cabbage Puzzle");
 		System.out.println();
@@ -64,6 +66,12 @@ public class Tester {
 		System.out.println("Water Jugs Problem");
 		System.out.println();
 		trySolvers(new WaterJugState());
+		System.out.println("---------------------------------------------------------------");
+		*/
+		System.out.println("---------------------------------------------------------------");
+		System.out.println("Kirako");
+		System.out.println();
+		trySolvers(new Kirako());
 		System.out.println("---------------------------------------------------------------");
 	}
 }
