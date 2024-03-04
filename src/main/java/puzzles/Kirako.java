@@ -88,7 +88,22 @@ public class Kirako extends AbstractState {
 
     @java.lang.Override
     public double getHeuristic() {
+
         return 0;
+        /*
+        if (jobb.isEmpty())
+            return 3;
+
+        if (jobb.get(0) != Negyzet.C)
+            return 2;
+
+        if (jobb.size() > 1)
+            if (jobb.get(1) != Negyzet.B)
+                return 1;
+
+        return 0;
+
+         */
     }
 
     @Override
@@ -105,8 +120,47 @@ public class Kirako extends AbstractState {
             else
                 _temp += " ";
 
-            _temp += "\n";
+            if (i != 0)
+                _temp += "\n";
         }
         return _temp;
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    /*
+    @Override
+    public boolean equals(Object o) {
+        if (o==null || !(o instanceof Kirako))
+            return false;
+
+        Kirako _kirako = (Kirako) o;
+
+        if (_kirako.bal.size() != this.bal.size())
+            return false;
+        else
+        {
+            for (int i = 0; i < this.bal.size(); i++) {
+                if (_kirako.bal.get(i) != this.bal.get(i))
+                    return false;
+            }
+        }
+
+        if (_kirako.jobb.size() != this.jobb.size())
+            return false;
+        else
+        {
+            for (int i = 0; i < this.jobb.size(); i++) {
+                if (_kirako.jobb.get(i) != this.jobb.get(i))
+                    return false;
+            }
+        }
+
+        return true;
+    }
+
+     */
 }
